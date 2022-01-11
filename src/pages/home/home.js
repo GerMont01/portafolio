@@ -8,7 +8,7 @@ const Home = () => {
 
     window.onscroll = () => {
         document.getElementById("arrowDown").style.opacity = "0";
-        document.getElementById("introCol").style.width = "100%"
+        document.getElementById("introCol").style.opacity = "1";
     }
 
     return (

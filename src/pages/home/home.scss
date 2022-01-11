@@ -1,12 +1,30 @@
 @import "../../colors.scss";
 
+@media (orientation: portrait) and (max-width: 600px) {
+    #homeContainer {
+        padding-top: 13vh !important;
+        #meRow{
+            #meCol {
+                p {
+                    width: 90% !important;
+                }
+            }
+        }
+    }
+}
+@media (orientation: landscape) and (max-height: 400px) {
+    #homeContainer {
+        padding-top: 12vh !important;
+    }
+}
+
 #homeContainer{
     // height: 100vh;
     width: 100%;
     color: $primaryColor;
     position: relative;
     padding-top: 20vh;
-   #meRow{
+    #meRow{
         height: 100%;
         #meCol {
             display: flex;
@@ -48,16 +66,19 @@
         } 
     }
     #introRow {
-        margin-top: 10%;
+        margin-top: 5%;
         #introCol {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 0;
-            transition: 5s;
+            opacity: 0;
+            transition: 3s;
             overflow: hidden;
             flex: none;
+            h1 {
+                margin: 5%;
+            }
             p {
                 text-align: center;
                 width: 75vw;

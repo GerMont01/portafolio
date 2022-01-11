@@ -1,5 +1,11 @@
 @import "../../colors.scss";
 
+@media (orientation: landscape) and (max-height: 400px) {
+    .header{
+        padding: 1% !important;
+    }
+}
+
 .header{
     position: absolute;
     width: 100%;
