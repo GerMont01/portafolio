@@ -4,8 +4,8 @@ import { Link, useLocation } from 'react-router-dom';
 import './header.scss';
 
 const Header = () => {
-
-    const [ currentPage, setCurrentPage ] = useState("/");
+    const location = useLocation();
+    const [ currentPage, setCurrentPage ] = useState(location.pathname);
 
     //Add class "selected" to A element when current page is set and remove for the rest
     useEffect(()=>{

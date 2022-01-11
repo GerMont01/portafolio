@@ -23,7 +23,7 @@
     width: 100%;
     color: $primaryColor;
     position: relative;
-    padding-top: 20vh;
+    padding-top: 17vh;
     #meRow{
         height: 100%;
         #meCol {
@@ -78,6 +78,7 @@
             flex: none;
             h1 {
                 margin: 5%;
+                color: $secondaryColor;
             }
             p {
                 text-align: center;

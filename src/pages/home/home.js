@@ -2,14 +2,20 @@ import { FaGithubSquare, FaLinkedin, FaFacebookSquare } from 'react-icons/fa';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { Col, Container, Row } from 'react-bootstrap';
 import './home.scss';
+import { useEffect } from 'react';
 
 
 const Home = () => {
 
-    window.onscroll = () => {
-        document.getElementById("arrowDown").style.opacity = "0";
-        document.getElementById("introCol").style.opacity = "1";
-    }
+    useEffect(() => {
+        window.onscroll = () => {
+            if (document.getElementById("arrowDown")) {
+                document.getElementById("arrowDown").style.opacity = "0";
+                document.getElementById("introCol").style.opacity = "1"; 
+            }
+        } 
+    },[])
+    
 
     return (
         <>
