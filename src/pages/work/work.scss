@@ -1,14 +1,31 @@
 @import "../../colors.scss";
 
+@media (orientation: portrait) and (max-width: 600px) {
+    #work-container {
+        .projects{
+            .project {
+                height: 400px !important;
+            }
+        }
+    }
+}
+    
+
 #work-container {
     padding-top: 22vh;
     color: $primaryColor;
     .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
         .project {
             position: relative;
+            width: 620px;
             min-width: 300px;
             height: 600px;
-            margin: 10px;
+            margin: 8px;
             overflow: hidden;
             display: flex;
             justify-content: center;
