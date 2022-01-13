@@ -7,6 +7,7 @@ import onlinepoker from '../../images/online-poker3.png';
 import onlinepoker2 from '../../images/online-poker.png';
 import pocketcity from '../../images/pocket-city.png';
 import { useEffect, useState } from 'react';
+import { projects } from './projects';
 
 const Work = () => {
 
@@ -35,54 +36,16 @@ const Work = () => {
             </Row>
             <Row>
                 <Col className='projects'>
-                    <div className='project'>
-                        <img alt='online poker' src={onlinepoker}/>
-                        <div className='content'>
-                            <h2>Online Poker</h2>
-                            <p>ReactJS/ExpressJS/Typescript</p>  
+                    {projects.map(project=>(
+                        <div className='project'>
+                            <img alt='online poker' src={project.images[0]}/>
+                            <div className='content'>
+                                <h2>{project.name}</h2>
+                                <p>{project.tools}</p>  
+                            </div>
+                            <button>Learn more</button>
                         </div>
-                        <button>Learn more</button>
-                    </div>
-                    <div className='project'>
-                        <img alt='pocket city' src={pocketcity}/>
-                        <div className='content'>
-                            <h2>Pocket City</h2>
-                            <p>ReactJS</p>  
-                        </div>
-                        <button>Learn more</button>
-                    </div>
-                    <div className='project'>
-                        <img alt='dashboard' src={dashboard}/>
-                        <div className='content'>
-                            <h2>System Analyzer</h2>
-                            <p>ReactJS/ExpressJS</p>  
-                        </div>
-                        <button>Learn more</button>
-                    </div>
-                    <div className='project'>
-                        <img alt='cinemont' src={cinemont}/>
-                        <div className='content'>
-                            <h2>Cinemont</h2>
-                            <p>jQuery/Javascript/SASS</p>  
-                        </div>
-                        <button>Learn more</button>
-                    </div>
-                    <div className='project'>
-                        <img alt='linlitalk' src={linlitalk} />
-                        <div className='content'>
-                            <h2>Linlitalk</h2>
-                            <p>NodeJS</p>  
-                        </div>
-                        <button>Learn more</button>
-                    </div>
-                    <div className='project'>
-                        <img alt='other' src={onlinepoker2}/>
-                        <div className='content'>
-                            <h2>Online Poker</h2>
-                            <p>React/Express/Typescript</p>  
-                        </div>
-                        <button>Learn more</button>
-                    </div>
+                    ))}
                 </Col>
             </Row>
         </Container>
