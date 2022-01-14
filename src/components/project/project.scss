@@ -32,11 +32,15 @@
             }
         }
     }
-    #imagescarousel{
-        // width: fit-content;
-        img {
-            height: 500px;
+    #col2 {
+        display: flex;
+        justify-content: center;
+        #imagescarousel{
+            width: 760px;
+            img {
+                height: 550px;
+                width: inherit;
+            }
         }
     }
-    
 }

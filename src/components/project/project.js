@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import './project.scss';
 import { projects } from '../../projects';
@@ -27,8 +27,12 @@ const Project = () => {
                     <p>{project.description}</p>
                     <p>{parse(myrole)}</p>
                     <div className='projectlinks'>
-                        <a href={project.github} target="_blank">Github Repository</a>
-                        <a href={project.demo} target="_blank">Visit Website</a>
+                        {project.github.length > 0 ? (
+                            <a href={project.github} target="_blank" rel="noreferrer">Github Repository</a>
+                        ) : (null)}
+                        {project.demo.length > 0 ? (
+                        <a href={project.demo} target="_blank" rel="noreferrer">Visit Website</a>
+                        ) : (null)}
                     </div>
                 </Col>
                 <Col id="col2" xs={12} md={8}>

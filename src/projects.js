@@ -21,7 +21,8 @@ export const projects = [
         role: "This Project was fully developed by me",
         images: [
             require("./images/pocket-city.png"),
-            require("./images/pocket-city2.png")
+            require("./images/pocket-city2.png"),
+            require("./images/pocket-city3.png")
         ],
         github: "https://github.com/GerMont01/weather_app",
         demo: "https://germont01.github.io/weather_app/"
@@ -61,7 +62,9 @@ export const projects = [
         description: "Linlitalk is an app designed for chinese population living in Vancouver, where users can schedule weekly meetings with other users that share similar interest. Frontend is currently in development and Backend is in production using some Jotforms as interface",
         role: "My Role was to develop the whole system: the connection between Jotform and MySQL, sending emails with custom content and scheduling the meetings and generating the links",
         images: [
-            require("./images/linlitalk.png")
+            require("./images/linlitalk.png"),
+            require("./images/linlitalk2.png"),
+            require("./images/linlitalk3.png")
         ],
         github: "",
         demo: "https://form.jotform.com/211977332502251"
