@@ -5,27 +5,35 @@ import './header.scss';
 
 const Header = () => {
     const location = useLocation();
-    const [ currentPage, setCurrentPage ] = useState(location.pathname);
+    const [ currentPage, setCurrentPage ] = useState();
+
+    useEffect(()=>{
+        if (location.pathname.length < 9) {
+            setCurrentPage(location.pathname)
+        } else {
+            setCurrentPage("/work")
+        }
+    },[location.pathname])
 
     //Add class "selected" to A element when current page is set and remove for the rest
     useEffect(()=>{
+        if (currentPage) {
+            let links = document.getElementsByTagName("A")
 
-        let links = document.getElementsByTagName("A")
-
-        for (let i=0;i<links.length;i++){
-            links[i].classList.remove("selected")
+            for (let i=0;i<links.length;i++){
+                links[i].classList.remove("selected")
+            }
+            document.getElementById(currentPage).classList.add("selected");
         }
-        document.getElementById(currentPage).classList.add("selected");
-    
     },[currentPage])
 
     return (
         <div className='header'>
             <nav>
-                <Link id="/" to="/" onClick={()=>setCurrentPage("/")}>Home</Link>
-                <Link id="/about" to="about" onClick={()=>setCurrentPage("/about")}>About</Link>
-                <Link id="/work" to="work" onClick={()=>setCurrentPage("/work")}>Work</Link>
-                <Link id="/contact" to="contact" onClick={()=>setCurrentPage("/contact")}>Contact</Link>
+                <Link id="/" to="/" >Home</Link>
+                <Link id="/about" to="about" >About</Link>
+                <Link id="/work" to="work" >Work</Link>
+                <Link id="/contact" to="contact" >Contact</Link>
             </nav>
         </div>
     );

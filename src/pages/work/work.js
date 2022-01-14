@@ -1,26 +1,43 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import './work.scss';
-import linlitalk from '../../images/linlitalk.png';
-import cinemont from '../../images/cinemont2.png';
-import dashboard from '../../images/dashboard.png';
-import onlinepoker from '../../images/online-poker3.png';
-import onlinepoker2 from '../../images/online-poker.png';
-import pocketcity from '../../images/pocket-city.png';
 import { useEffect, useState } from 'react';
-import { projects } from './projects';
+import { projects } from '../../projects';
+import { useNavigate } from 'react-router-dom';
 
 const Work = () => {
 
+    const navigate = useNavigate()
     const [ selected, setSelected ] = useState("all");
+    const [ selectedProjects, setSelectedProjects ] = useState(projects)  
 
     useEffect(()=>{
-        let projects = document.getElementsByTagName("SPAN")
+        let list = document.getElementsByTagName("SPAN")
 
-        for (let i=0;i<projects.length;i++){
-            projects[i].classList.remove("work-selected")
+        for (let i=0;i<list.length;i++){
+            list[i].classList.remove("work-selected")
         }
         document.getElementById(selected).classList.add("work-selected");
+
+        switch (selected) {
+            case "all":
+                setSelectedProjects(projects)
+                break;
+            case "ui/ux":
+                setSelectedProjects(projects.filter(project=>project.type.includes("ui/ux")))
+                break;
+            case "frontend":
+                setSelectedProjects(projects.filter(project=>project.type.includes("frontend")))
+                break;
+            case "backend":
+                setSelectedProjects(projects.filter(project=>project.type.includes("backend")))
+                break;
+            default: 
+                setSelectedProjects(projects)
+                break;
+        }
+
     },[selected])
+
 
     return (
         <Container id='work-container'>
@@ -36,14 +53,14 @@ const Work = () => {
             </Row>
             <Row>
                 <Col className='projects'>
-                    {projects.map(project=>(
-                        <div className='project'>
+                    {selectedProjects.map((project,index)=>(
+                        <div className='project' key={index}>
                             <img alt='online poker' src={project.images[0]}/>
                             <div className='content'>
                                 <h2>{project.name}</h2>
                                 <p>{project.tools}</p>  
                             </div>
-                            <button>Learn more</button>
+                            <button onClick={()=>navigate(`/work/${project.name}`)}>Learn more</button>
                         </div>
                     ))}
                 </Col>

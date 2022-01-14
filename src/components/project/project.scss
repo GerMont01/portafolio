@@ -1,0 +1,42 @@
+@import '../../colors.scss';
+
+#projectContainer{
+    padding-top: 20vh;
+    color: $primaryColor;
+    #col1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 2%;
+        .nameandtools {
+            display: flex;
+            flex-direction: column;
+            p {
+                color: $secondaryColor;
+                margin-top: 8px;
+            }
+        }
+        span {
+            color: $secondaryColor;
+        }
+        a {
+            text-decoration: none;
+            color: $primaryColor;
+            margin-right: 20px;
+            padding: 5px;
+            border: 2px solid $primaryColor;
+            border-radius: 5px;
+            &:hover {
+                border-color: $secondaryColor;
+                color: $secondaryColor;
+            }
+        }
+    }
+    #imagescarousel{
+        // width: fit-content;
+        img {
+            height: 500px;
+        }
+    }
+    
+}
