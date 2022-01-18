@@ -33,7 +33,7 @@ const Header = () => {
                 <Link id="/" to="/" >Home</Link>
                 <Link id="/about" to="about" >About</Link>
                 <Link id="/work" to="work" >Work</Link>
-                <Link id="/contact" to="contact" >Contact</Link>
+                <a href='mailto:gerardomontme@gmail.com'>Contact</a>
             </nav>
         </div>
     );

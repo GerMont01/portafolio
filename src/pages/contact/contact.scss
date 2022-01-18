@@ -1,0 +1,24 @@
+@import '../../colors.scss';
+
+#contactContainer {
+    position: relative;
+    top: 20vh;
+    color: $primaryColor;
+    #contactRow1 {
+        #contactColumn1 {
+            span{
+                color: $secondaryColor;
+            }
+        }
+    }
+    #contactRow2 {
+        #contactColumn2 {
+            .formik {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

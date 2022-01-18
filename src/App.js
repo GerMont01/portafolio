@@ -7,7 +7,7 @@ import {
 import Home from './pages/home/home';
 import Work from './pages/work/work';
 import About from './pages/about/about';
-import Contact from './pages/contact/contact';
+// import Contact from './pages/contact/contact';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Project from './components/project/project';
@@ -22,7 +22,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="work" element={<Work />} />
           <Route path="work/:name" element={<Project />} />
-          <Route path="contact" element={<Contact />} />
+          {/* <Route path="contact" element={<Contact />} /> */}
         </Routes>
       </BrowserRouter>
       <Footer />
