@@ -1,5 +1,13 @@
 @import '../../colors.scss';
 
+@media (orientation: portrait) and (max-width: 600px) {
+    #projectContainer {
+        padding-top: 13vh !important;
+        #col1, #col2 {
+          padding-bottom: 10% !important;  
+        }
+    }
+}
 #projectContainer{
     padding-top: 20vh;
     color: $primaryColor;
@@ -38,7 +46,6 @@
         #imagescarousel{
             width: 760px;
             img {
-                height: 550px;
                 width: inherit;
             }
         }

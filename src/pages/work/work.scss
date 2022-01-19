@@ -2,6 +2,7 @@
 
 @media (orientation: portrait) and (max-width: 600px) {
     #work-container {
+        padding-top: 13vh !important;
         .projects{
             .project {
                 height: 400px !important;

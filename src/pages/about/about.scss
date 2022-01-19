@@ -1,0 +1,90 @@
+@import '../../colors.scss';
+
+#aboutContainer{
+    padding-top: 22vh;
+    color: $primaryColor;
+    #aboutRow {
+        .skillsRow {
+            div{
+               position: fixed; 
+            }
+        }
+        .sliders{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            padding-top: 20vh;
+            height: 100%;
+            .slider1 {
+                position: fixed;
+                top: 50vh;
+                height: 50vh;
+                width: 2px;
+                background-image: linear-gradient($secondaryColor, $bgColor);
+                z-index: 2;
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: -4px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 150%;
+                    background-color: $secondaryColor;
+                }
+            }
+            .slider2 {
+                background-image: linear-gradient($bgColor, $secondaryColor);
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+                height: 50vh;
+                width: 2px;
+            }
+        }  
+        .timelineCol {
+            h1 {
+                text-align: end;
+                font-size: 25px;
+                margin-top: 10px;
+            }
+            .timelineElements{
+                margin-top: 5vh;
+                .experience {
+                    opacity: 0.5;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding: 5% 0;
+                    transition: 0.5s;     
+                    img {
+                        width: 100px;
+                        height: 100px;
+                    }       
+                    div {
+                        margin-left: 50px;
+                        h3 {
+                            font-size: 20px;
+                        }
+                        h4 {
+                            color: $secondaryColor;
+                            font-size: 13px;  
+                        }
+                        h5 {
+                            font-size: 10.5px;
+                        }
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.showexperience {
+    transform: scale(1.05);
+    opacity: 1 !important;
+}
