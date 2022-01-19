@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import './about.scss';
+import { SiJavascript, SiHtml5, SiCss3, SiJquery, SiReact, SiNodedotjs, SiExpress, SiGit, SiSass, SiMongodb, SiTypescript } from 'react-icons/si'
+
 
 const About = () => {
 
@@ -32,6 +34,18 @@ const About = () => {
                 <Col className='skillsRow' xs={12} md={3}>
                     <div>
                         <h1>My Skills</h1>
+                        <div className='iconscontainer'>
+                            <div className='skill'><SiHtml5 className='skillicon'/><p>HTML/HTML5</p></div>
+                            <div className='skill'><SiCss3 className='skillicon'/><p>CSS/CSS3</p></div>
+                            <div className='skill'><SiSass className='skillicon'/><p>SASS</p></div>
+                            <div className='skill'><SiJavascript className='skillicon'/><p>Javascript</p></div>
+                            <div className='skill'><SiTypescript className='skillicon' /><p>Typescript</p></div>
+                            <div className='skill'><SiReact className='skillicon'/><p>React JS</p></div>
+                            <div className='skill'><SiNodedotjs className='skillicon'/><p>Node JS</p></div>
+                            <div className='skill'><SiExpress className='skillicon'/><p>Express JS</p></div>
+                            <div className='skill'><SiMongodb className='skillicon'/><p>MongoDB</p></div>
+                            <div className='skill'><SiGit className='skillicon'/><p>Git</p></div>
+                        </div>
                         <h1>My Interests</h1>
                     </div>
                 </Col>

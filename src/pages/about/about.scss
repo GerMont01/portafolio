@@ -7,6 +7,23 @@
         .skillsRow {
             div{
                position: fixed; 
+               width: inherit;
+               height: inherit;
+               .iconscontainer {
+                   display: flex;
+                   flex-wrap: wrap;
+                   width: inherit;
+                    height: inherit;
+                   .skill {
+                       position: relative;
+                       text-align: center;
+                       .skillicon {
+                            height: 50px;
+                            width: 50px;
+                            margin: 5px;
+                        } 
+                   } 
+               }
             }
         }
         .sliders{
