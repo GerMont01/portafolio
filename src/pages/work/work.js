@@ -1,7 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import './work.scss';
 import { useEffect, useState } from 'react';
-import { projects } from '../../projects';
+import { projects } from '../../data/projects';
 import { useNavigate } from 'react-router-dom';
 
 const Work = () => {

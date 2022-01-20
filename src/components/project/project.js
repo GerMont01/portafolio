@@ -2,7 +2,7 @@
 // import { useEffect, useState } from 'react';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import './project.scss';
-import { projects } from '../../projects';
+import { projects } from '../../data/projects';
 import { useParams } from 'react-router-dom';
 import parse from 'html-react-parser';
 
