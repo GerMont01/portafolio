@@ -11,22 +11,29 @@ const About = () => {
     const [ windowHeight, setWindowHeight ] = useState(window.innerHeight);
 
     useEffect(()=>{
-        const elements = document.getElementsByClassName('experience')
-        let skills = []
-        skills.push(...document.getElementsByClassName('iconscontainer'))
-        skills.push(...document.getElementsByClassName('embedded'))
-        skills.push(...document.getElementsByClassName('interests'))
-        skills.push(...document.getElementsByClassName('aboutimg'))
-        skills.push(...document.getElementsByTagName('h1'))
-        console.log(skills)
+        
+    },[])
+
+    useEffect(()=>{
+        const elements = document.getElementsByClassName('experience');
+        let skills =[
+            ...document.getElementsByClassName('iconscontainer'),
+            ...document.getElementsByClassName('embedded'),
+            ...document.getElementsByClassName('interests'),
+            ...document.getElementsByClassName('aboutimg'),
+            ...document.getElementsByTagName('h1')
+        ];
+        window.onresize = () => {
+            setWindowHeight(window.innerHeight);
+            console.log(window.innerHeight)
+        }
         if (elements) checkPosition(elements);
         if (skills) checkPosition2(skills);
         window.onscroll = () => {
             if (elements) checkPosition(elements);
             if (skills) checkPosition2(skills);
         }
-        window.onresize = () => setWindowHeight(window.innerHeight);
-    },[])
+    },[windowHeight])
 
     const checkPosition = (elements) => {
         for (let element of elements) {

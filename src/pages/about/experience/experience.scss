@@ -1,9 +1,12 @@
 @import '../../../colors.scss';
 
 @media (orientation: portrait) and (max-width: 600px) {
-    p {
-        display: none;
+    .timelineElements {
+        p {
+            display: none;
+        }
     }
+   
 }
 
 .timelineElements{
