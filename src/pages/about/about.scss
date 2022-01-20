@@ -1,29 +1,89 @@
 @import '../../colors.scss';
 
+@media (orientation: portrait) and (max-width: 768px) {
+    .sliders {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        .slider1 {
+            position: sticky !important;
+        }
+    }
+    .skillsCol {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+
+}
+
 #aboutContainer{
     padding-top: 22vh;
+    padding-bottom: 5vh;
     color: $primaryColor;
     #aboutRow {
-        .skillsRow {
-            div{
-               position: fixed; 
-               width: inherit;
-               height: inherit;
-               .iconscontainer {
-                   display: flex;
-                   flex-wrap: wrap;
-                   width: inherit;
+        .skillsCol {
+            margin: 0;
+            padding: 0;
+            .skills {
+                width: 100%;
+                height: inherit;
+                h1 {
+                    padding: 3vh 0;
+                    font-size: 25px;
+                    margin: 0;
+                    opacity: 0;
+                    transition: 2s;
+                    &:first-of-type {
+                        padding-top: 5vh;
+                    }
+                }
+                .iconscontainer {
+                    padding-top: 2vh;
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
                     height: inherit;
-                   .skill {
+                    opacity: 0;
+                    transition: 2s;
+                    .skill {
                        position: relative;
                        text-align: center;
+                       width: 80px;
+                       margin: 5px;
                        .skillicon {
-                            height: 50px;
-                            width: 50px;
+                            height: 30px;
+                            width: 30px;
                             margin: 5px;
                         } 
-                   } 
-               }
+                        p {
+                            font-size: 12px;
+                        }
+                    } 
+                }
+                .embedded, .interests {
+                    opacity: 0;
+                    transition: 2s;
+                    padding-left: 5px;
+                    
+                    li {
+                        display: flex;
+                        align-items: center;
+                        padding-bottom: 10px;
+                        list-style: none;
+                        .interesticon {
+                            margin-right: 10px;
+                            height: 30px;
+                            width: 30px;
+                        }
+                    }
+                }
+                img {
+                    opacity: 0;
+                    transition: 2s;
+                    width: 100%;
+                    padding: 10px;
+                }
             }
         }
         .sliders{
@@ -64,10 +124,11 @@
             h1 {
                 text-align: end;
                 font-size: 25px;
-                margin-top: 10px;
+                padding-top: 5vh;
+                margin: 0;
             }
             .timelineElements{
-                margin-top: 5vh;
+                padding-top: 2vh;
                 .experience {
                     opacity: 0.5;
                     width: 100%;
@@ -103,5 +164,8 @@
 
 .showexperience {
     transform: scale(1.05);
+    opacity: 1 !important;
+}
+.fadein {
     opacity: 1 !important;
 }

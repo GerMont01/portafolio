@@ -1,28 +1,47 @@
 import { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import './about.scss';
-import { SiJavascript, SiHtml5, SiCss3, SiJquery, SiReact, SiNodedotjs, SiExpress, SiGit, SiSass, SiMongodb, SiTypescript } from 'react-icons/si'
-
+import { SiJavascript, SiHtml5, SiCss3, SiReact, SiNodedotjs, SiExpress, SiSass, SiMongodb, SiTypescript } from 'react-icons/si';
+import { MdVideogameAsset, MdOutlineAirplanemodeActive, MdFitnessCenter } from 'react-icons/md';
 
 const About = () => {
 
-    const windowHeight = window.innerHeight/2;
+    const windowHeight = window.innerHeight;
 
     useEffect(()=>{
         const elements = document.getElementsByClassName('experience')
+        let skills = []
+        skills.push(...document.getElementsByClassName('iconscontainer'))
+        skills.push(...document.getElementsByClassName('embedded'))
+        skills.push(...document.getElementsByClassName('interests'))
+        skills.push(...document.getElementsByClassName('aboutimg'))
+        skills.push(...document.getElementsByTagName('h1'))
+        console.log(skills)
         if (elements) checkPosition(elements);
+        if (skills) checkPosition2(skills);
         window.onscroll = () => {
             if (elements) checkPosition(elements);
+            if (skills) checkPosition2(skills);
         }
     },[])
 
     const checkPosition = (elements) => {
         for (let element of elements) {
             let positionFromTop = element.getBoundingClientRect().top;
-            if (positionFromTop - windowHeight <= -5 && positionFromTop - windowHeight > -200) {
+            if (positionFromTop - windowHeight/2 <= -5 && positionFromTop - windowHeight/2 > -200) {
                 element.classList.add('showexperience');
             } else {
                 element.classList.remove('showexperience');
+            }
+        }
+    }
+    const checkPosition2 = (elements) => {
+        for (let element of elements) {
+            let positionFromTop = element.getBoundingClientRect().top;
+            if (positionFromTop - windowHeight <= 0) {
+                element.classList.add('fadein');
+            } else {
+                element.classList.remove('fadein');
             }
         }
     }
@@ -31,9 +50,9 @@ const About = () => {
     return (
         <Container id='aboutContainer'>
             <Row id='aboutRow'>
-                <Col className='skillsRow' xs={12} md={3}>
-                    <div>
-                        <h1>My Skills</h1>
+                <Col className='skillsCol' xs={12} md={3}>
+                    <div className='skills'>
+                        <h1>Web</h1>
                         <div className='iconscontainer'>
                             <div className='skill'><SiHtml5 className='skillicon'/><p>HTML/HTML5</p></div>
                             <div className='skill'><SiCss3 className='skillicon'/><p>CSS/CSS3</p></div>
@@ -44,9 +63,22 @@ const About = () => {
                             <div className='skill'><SiNodedotjs className='skillicon'/><p>Node JS</p></div>
                             <div className='skill'><SiExpress className='skillicon'/><p>Express JS</p></div>
                             <div className='skill'><SiMongodb className='skillicon'/><p>MongoDB</p></div>
-                            <div className='skill'><SiGit className='skillicon'/><p>Git</p></div>
                         </div>
-                        <h1>My Interests</h1>
+                        <h1>Embedded systems</h1>
+                        <ul className='embedded'>
+                            <li>Microcontrollers with C</li>
+                            <li>PLCs with ladder language</li>
+                            <li>FPGAs with Verilog</li>
+                            <li>Arduino</li>
+                        </ul>
+                        <h1>Other Interests</h1>
+                        <ul className='interests'>
+                            <li><MdVideogameAsset className='interesticon'/> Video Games</li>
+                            <li><MdOutlineAirplanemodeActive className='interesticon'/> Travel</li>
+                            <li><MdFitnessCenter className='interesticon'/> Fitness</li>
+                        </ul>
+                        <img className='aboutimg' alt='about1' src={require('../../images/about1.jpg')} />
+                        <img className='aboutimg' alt='about2' src={require('../../images/about2.jpg')} />
                     </div>
                 </Col>
                 <Col xs={1} md={1}>
