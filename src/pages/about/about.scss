@@ -133,10 +133,8 @@
             height: 100%;
             .slider1 {
                 position: sticky;
-                top: 50vh;
-                height: 50vh;
-                // width: 2px;
-                // background-image: linear-gradient($secondaryColor, $bgColor);
+                top: 47vh;
+                height: 53vh;
                 z-index: 2;
                 &::after {
                     content: '';
@@ -148,17 +146,15 @@
                     height: 10px;
                     border-radius: 150%;
                     background-color: $secondaryColor;
-                    z-index: 5;
                 }
                 &::before {
                     content: '';
                     display: block;
                     position: absolute;
                     left: 0;
-                    height: 50vh;
+                    height: 53vh;
                     width: 2px;
                     background-image: linear-gradient($secondaryColor, $bgColor);
-                    // z-index: 5;
                 }
             }
             .slider2 {
@@ -172,7 +168,7 @@
             }
         }  
         .timelineCol {
-            padding-bottom: 34vh;
+            padding-bottom: 37vh;
             h1 {
                 text-align: end;
                 font-size: 25px;

@@ -13,6 +13,16 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    #introCol1::after{
+        top: 100% !important;
+        left: 10% !important;
+        height: 1px !important;
+        width: 80% !important;
+    }
+}
+
 @media (orientation: landscape) and (max-height: 400px) {
     #homeContainer {
         padding-top: 12vh !important;
@@ -67,24 +77,39 @@
         } 
     }
     #introRow {
-        margin-top: 5%;
-        #introCol {
+        padding: 5% 0;
+        #introCol1, #introCol2 {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             opacity: 0;
-            transition: 3s;
-            overflow: hidden;
-            flex: none;
+            transition: opacity 3s;
+            padding: 5%;
             h1 {
+                width: 100%;
                 margin: 5%;
                 color: $secondaryColor;
+                font-size: 25px;
             }
             p {
-                text-align: center;
-                width: 75vw;
-                font-size: 20px;
+                text-align: justify;
+                font-size: 18px;
+            }
+        }
+        #introCol1 {
+            position: relative;
+            h1 {
+                text-align: end;
+            }
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 9vh;
+                right: 0;
+                height: 70%;
+                width: 1px;
+                background-color: $secondaryColor;
             }
         }
     }

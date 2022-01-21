@@ -10,7 +10,7 @@ import About from './pages/about/about';
 // import Contact from './pages/contact/contact';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
-import Project from './components/project/project';
+import Project from './pages/project/project';
 
 function App() {
   return (
@@ -22,7 +22,6 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="work" element={<Work />} />
           <Route path="work/:name" element={<Project />} />
-          {/* <Route path="contact" element={<Contact />} /> */}
         </Routes>
       </BrowserRouter>
       <Footer />
