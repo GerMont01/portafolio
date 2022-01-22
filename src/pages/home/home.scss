@@ -65,15 +65,19 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            svg {
-                height: 35px !important;
-                width: 35px !important;
-                margin: 5px;
-                &:hover {
-                    cursor: pointer;
-                    color: $secondaryColor !important;
+            a {
+                svg {
+                    height: 35px !important;
+                    width: 35px !important;
+                    margin: 5px;
+                    color: $primaryColor;
+                    &:hover {
+                        cursor: pointer;
+                        color: $secondaryColor !important;
+                    }
                 }
             }
+            
         } 
     }
     #introRow {

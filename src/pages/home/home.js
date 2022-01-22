@@ -1,4 +1,4 @@
-import { FaGithubSquare, FaLinkedin, FaFacebookSquare } from 'react-icons/fa';
+import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { Col, Container, Row } from 'react-bootstrap';
 import './home.scss';
@@ -29,9 +29,8 @@ const Home = () => {
             </Row>
             <Row id="socialMediaRow">
                 <Col id="socialMediaCol">
-                        <FaFacebookSquare />
-                        <FaLinkedin />
-                        <FaGithubSquare />
+                        <a href='https://www.linkedin.com/in/gerardo-montero-mejia-276040161/' target='_blank' rel="noreferrer"><FaLinkedin /></a>
+                        <a href='https://github.com/GerMont01' target='_blank' rel="noreferrer"><FaGithubSquare /></a>
                 </Col>
             </Row>
             <Row id="introRow">
