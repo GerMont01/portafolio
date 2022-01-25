@@ -13,7 +13,6 @@ const Project = () => {
     const project = projects.find(project => project.name === name)
     let role = project.role.split(" ");
     const myrole = `<span>${role.shift()} ${role.shift()}</span> ${role.join(" ")}`
-    console.log(myrole)
 
 
     return (
@@ -37,8 +36,8 @@ const Project = () => {
                 </Col>
                 <Col id="col2" xs={12} md={8}>
                     <Carousel id="imagescarousel">
-                    {project.images.map(image => (
-                        <Carousel.Item interval={2000}>
+                    {project.images.map((image,index) => (
+                        <Carousel.Item key={index} interval={2000}>
                             <img alt={project.name} src={image} />
                         </Carousel.Item>
                     ))}
