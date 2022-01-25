@@ -11,7 +11,7 @@ export const projects = [
             require("../images/online-poker2.png")
         ],
         github: "",
-        demo: "http://ec2-3-141-97-233.us-east-2.compute.amazonaws.com/"
+        demo: "http://ec2-18-188-85-148.us-east-2.compute.amazonaws.com/"
     },
     {
         name:"My Pocket City",
