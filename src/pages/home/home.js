@@ -23,7 +23,7 @@ const Home = () => {
         <Container id='homeContainer'>
             <Row id='meRow'>
                 <Col id='meCol'>
-                    <img src={require('../../images/me.jpeg')} alt='me'/>
+                    <img src={require('../../images/me2.jpg')} alt='me'/>
                     <p>Hi, I am <span>Gerardo Montero</span>, a Fullstack Developer and Electronics Engineer based in Vancouver, BC.</p>
                 </Col>
             </Row>
