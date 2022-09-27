@@ -1,7 +1,15 @@
 export const cv = [
     {
+        image: require('../images/C-Logo.jpg'),
+        title:'Frontend Developer',
+        company:'Crewbite',
+        date:'May 2022 - Present',
+        location: 'Vancouver, British Columbia, Canada',
+        description: 'In charge of all frontend development for Crewbite, a production crew recruitment, application, built using React.js, aws amplify, MUI, Bootstrap and SCSS'
+    },
+    {
         image:require('../images/webmainland.jpeg'),
-        title:'Backend Developer',
+        title:'Software Developer',
         company:'Webmainland',
         date:'Sep 2021 - Dec 2021',
         location:'Vancouver, British Columbia, Canada',

@@ -1,5 +1,19 @@
 export const projects = [
     {
+        name:"Crewbite",
+        type: ["frontend"],
+        tools: "ReactJS, SCSS, Bootstrap, Material UI, AWS Amplify",
+        description: "Crewbite is a film production crew recruitment application, dedicated to helping you to find the right people and resources that you need to create your film",
+        role: "My Role was to lead and develop the frontend of the application",
+        images: [
+            require("../images/crewbite1.jpg"),
+            require("../images/crewbite2.jpg"),
+            require("../images/crewbite3.jpg")
+        ],
+        github:"",
+        demo: "https://www.crewbite.com"
+    },
+    {
         name:"Online Poker",
         type: ["ui/ux","frontend","backend"],
         tools: "ReactJS, ExpressJS, Typescript, Socket.io",

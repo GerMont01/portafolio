@@ -24,7 +24,7 @@ const Home = () => {
             <Row id='meRow'>
                 <Col id='meCol'>
                     <img src={require('../../images/me2.jpg')} alt='me'/>
-                    <p>Hi, I am <span>Gerardo Montero</span>, a Fullstack Developer and Electronics Engineer based in Vancouver, BC.</p>
+                    <p>Hi, I am <span>Gerardo Montero</span>, a Web Developer and Electronics Engineer based in Vancouver, BC.</p>
                 </Col>
             </Row>
             <Row id="socialMediaRow">
@@ -40,7 +40,7 @@ const Home = () => {
                 </Col>
                 <Col xs={12} md={6}id="introCol2">
                     <h1>What I do now</h1>
-                    <p>I migrated to Canada, where I took a diploma at Cornerstone International Community College of Canada in Web Development and had the opportunity to learn many tools such as HTML, CSS, SASS, Javascript, React, NodeJs, Express and Git. And now I am looking to create many projects, keep learning new technologies, innovate and find new ways of doing things.</p>
+                    <p>I migrated to Canada, where I took a diploma in Web Development at Cornerstone International Community College of Canada, and I have been working as a Frontend Developer, focusing in providing the best user experience by writing clean and efficient code, creating responsive designs and always looking to innovate.</p>
                 </Col>
             </Row>
         </Container>
